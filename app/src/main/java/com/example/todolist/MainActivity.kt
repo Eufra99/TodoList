@@ -19,11 +19,6 @@ class MainActivity : AppCompatActivity() {
             NewTaskSheet().show(supportFragmentManager, "newTaskTag")
         }
 
-        taskViewModel.name.observe(this){
-            binding.taskName.text = String.format("Task Name: %s", it)
-        }
-        taskViewModel.desc.observe(this){
-            binding.taskDesc.text = String.format("Task Desc: %s", it)
-        }
+
     }
 }

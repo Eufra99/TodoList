@@ -40,8 +40,7 @@ class NewTaskSheet : BottomSheetDialogFragment() {
     }
 
     private fun saveAction() {
-        taskViewModel.name.value = binding.name.text.toString()
-        taskViewModel.desc.value = binding.desc.text.toString()
+
         binding.name.setText("")
         binding.desc.setText("")
         dismiss()
