@@ -8,6 +8,7 @@
 
 
     <TextView
+        android:id="@+id/taskTitle"
         style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,12 +47,20 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/timePickerButtton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:text="@string/select_time"/>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/saveButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginHorizontal="20dp"
-        android:text="Save" />
+        android:text="@string/save" />
 
 
 </LinearLayout>
