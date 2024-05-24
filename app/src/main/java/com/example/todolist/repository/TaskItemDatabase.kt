@@ -1,9 +1,10 @@
-package com.example.todolist
+package com.example.todolist.repository
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.todolist.model.TaskItem
 
 @Database(entities = [TaskItem::class], version = 1, exportSchema = false)
 public abstract class TaskItemDatabase: RoomDatabase()
@@ -15,7 +16,7 @@ public abstract class TaskItemDatabase: RoomDatabase()
         @Volatile
         private var INSTANCE: TaskItemDatabase? = null
 
-        fun getDatabase(context: Context): TaskItemDatabase{
+        fun getDatabase(context: Context): TaskItemDatabase {
             return INSTANCE ?: synchronized(this)
             {
                 val instance = Room.databaseBuilder(

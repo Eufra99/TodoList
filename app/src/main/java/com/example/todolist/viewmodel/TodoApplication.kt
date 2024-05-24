@@ -1,6 +1,8 @@
-package com.example.todolist
+package com.example.todolist.viewmodel
 
 import android.app.Application
+import com.example.todolist.repository.TaskItemDatabase
+import com.example.todolist.repository.TaskItemRpository
 
 class TodoApplication: Application() {
 

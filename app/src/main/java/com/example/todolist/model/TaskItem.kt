@@ -1,10 +1,9 @@
-package com.example.todolist
+package com.example.todolist.model
 
 import android.content.Context
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.room.*
+import com.example.todolist.R
 import java.time.LocalDate
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter

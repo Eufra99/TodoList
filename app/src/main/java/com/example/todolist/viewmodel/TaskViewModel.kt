@@ -1,13 +1,12 @@
-package com.example.todolist
+package com.example.todolist.viewmodel
 
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
+import com.example.todolist.model.TaskItem
+import com.example.todolist.repository.TaskItemRpository
 import kotlinx.coroutines.launch
 import java.lang.IllegalArgumentException
 import java.time.LocalDate
@@ -28,6 +27,10 @@ class TaskViewModel(private val repository: TaskItemRpository): ViewModel() {
         if (!taskItem.isCompleted())
             taskItem.completedDateString = TaskItem.dateFormatter.format(LocalDate.now())
         repository.updateTaskItem(taskItem)
+    }
+
+    fun delete(taskItem: TaskItem) = viewModelScope.launch {
+        repository.deleteTaskItem(taskItem)
     }
 }
 

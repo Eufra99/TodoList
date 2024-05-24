@@ -1,10 +1,16 @@
-package com.example.todolist
+package com.example.todolist.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.todolist.viewmodel.TaskItemModelFactory
+import com.example.todolist.viewmodel.TaskViewModel
+import com.example.todolist.viewmodel.TodoApplication
 import com.example.todolist.databinding.ActivityMainBinding
+import com.example.todolist.model.TaskItem
+import com.example.todolist.view.adapter.TaskItemAdapter
+import com.example.todolist.view.listener.TaskItemClickListener
 
 class MainActivity : AppCompatActivity(), TaskItemClickListener {
 
@@ -44,5 +50,9 @@ class MainActivity : AppCompatActivity(), TaskItemClickListener {
 
     override fun completeTaskItem(taskItem: TaskItem) {
         taskViewModel.setCompleted(taskItem)
+    }
+
+    override fun deleteTaskItem(taskItem: TaskItem) {
+        taskViewModel.delete(taskItem)
     }
 }
