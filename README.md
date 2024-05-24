@@ -18,10 +18,10 @@ This is a simple Todo application that uses a RecyclerView with a CardView in ea
 <img src="screenShot/firstScreen.png" width="200" /> <img src="screenShot/bottomSheet.png" width="200" alt="App Screenshot" /> <img src="screenShot/editTask.png" width="200" alt="App Screenshot" />
 
 
-<img src="screenShot/taskTime.png" width="200" alt="App Screenshot" /> <img src="sscreenShot/deleteItem.png" width="200" alt="App Screenshot" />
+<img src="screenShot/taskTime.png" width="200" alt="App Screenshot" /> <img src="screenShot/deleteItem.png" width="200" alt="App Screenshot" />
 
 ## Documentation
-- [Documentation Android]([https://pub.dev/packages/jitsi_meet_flutter_sdk](https://developer.android.com/develop))
+- [Documentation Android](https://developer.android.com/develop)
 
 ## Tech Stack
 
